@@ -24,23 +24,24 @@ struct ContentView: View {
     ]
 
     var body: some View {
-        VStack {
-            Spacer()
-            Text("What are your core values? \(selectedValues.count)/\(maxCount)")
-                .font(.headline)
-                .fontWeight(.bold)
-            Spacer()
-            valueGrid
-            Spacer()
-            nextButton
-            Spacer()
+        NavigationView {
+            VStack {
+                Spacer()
+                Text("What are your core values? \(selectedValues.count)/\(maxCount)")
+                    .font(.headline)
+                    .fontWeight(.bold)
+                Spacer()
+                valueGrid
+                Spacer()
+                nextButton
+                Spacer()
+            }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 
     var nextButton: some View {
-        Button {
-
-        } label: {
+        NavigationLink(destination: HierarchyView(coreValues: selectedValues)) {
             Text("Next")
                 .foregroundColor(Color(.label))
                 .padding()
@@ -78,6 +79,18 @@ struct ContentView: View {
                         )
                 }
                 .disabled(!selectedValues.contains(value) && selectedValues.count >= maxCount)
+            }
+        }
+    }
+}
+
+struct HierarchyView: View {
+    @State var coreValues: [Value]
+
+    var body: some View {
+        VStack {
+            ForEach(coreValues, id: \.self) { coreValue in
+                Text(coreValue)
             }
         }
     }
