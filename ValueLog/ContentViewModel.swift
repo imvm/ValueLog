@@ -41,4 +41,8 @@ class ContentViewModel: ObservableObject {
             selectedValues.append(value)
         }
     }
+
+    func isValueDisabled(_ value: Value) -> Bool {
+        !selectedValues.contains(value) && selectedValues.count >= maxCount
+    }
 }

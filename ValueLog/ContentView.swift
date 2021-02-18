@@ -54,7 +54,7 @@ struct ContentView: View {
                 ) {
                     viewModel.addValue(value)
                 }
-                .disabled(!viewModel.selectedValues.contains(value) && viewModel.selectedValues.count >= viewModel.maxCount)
+                .disabled(viewModel.isValueDisabled(value))
             }
         }
     }

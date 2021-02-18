@@ -1,0 +1,18 @@
+opt_in_rules:
+  - attributes
+  - closure_end_indentation
+  - closure_spacing
+  - empty_count
+  - explicit_init
+  - first_where
+  - nimble_operator
+  - number_separator
+  - overridden_super_call
+  - operator_usage_whitespace
+  - object_literal
+  - prohibited_super_call
+  - redundant_nil_coalescing
+
+identifier_name:
+  excluded:
+    - id
