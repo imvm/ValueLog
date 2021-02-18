@@ -12,6 +12,8 @@ struct HierarchyView: View {
 
     var body: some View {
         VStack {
+            Text("Which one of these is more important to you?")
+                .bold()
             ForEach(coreValues, id: \.self) { coreValue in
                 Text(coreValue)
             }
