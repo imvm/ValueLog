@@ -35,11 +35,7 @@ class ContentViewModel: ObservableObject {
     ]
 
     func addValue(_ value: Value) {
-        if selectedValues.contains(value) {
-            selectedValues.removeAll(where: { $0 == value })
-        } else {
-            selectedValues.append(value)
-        }
+        selectedValues.toggle(value)
     }
 
     func isValueDisabled(_ value: Value) -> Bool {

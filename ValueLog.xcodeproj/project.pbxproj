@@ -13,6 +13,7 @@
 		2B08198125DDF31900F9D522 /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08198025DDF31900F9D522 /* View+Navigation.swift */; };
 		2B08198725DE88AC00F9D522 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2B08198625DE88AC00F9D522 /* .swiftlint.yml */; };
 		2B08199125DE8A6800F9D522 /* ValueLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08199025DE8A6800F9D522 /* ValueLogTests.swift */; };
+		2B08199C25DE8BCE00F9D522 /* Array+Toggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08199B25DE8BCE00F9D522 /* Array+Toggle.swift */; };
 		2B11251D257C58FC004B96D9 /* ValueLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11251C257C58FC004B96D9 /* ValueLogApp.swift */; };
 		2B11251F257C58FC004B96D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11251E257C58FC004B96D9 /* ContentView.swift */; };
 		2B112521257C58FD004B96D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B112520257C58FD004B96D9 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 		2B08198E25DE8A6800F9D522 /* ValueLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B08199025DE8A6800F9D522 /* ValueLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueLogTests.swift; sourceTree = "<group>"; };
 		2B08199225DE8A6800F9D522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B08199B25DE8BCE00F9D522 /* Array+Toggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Toggle.swift"; sourceTree = "<group>"; };
 		2B112519257C58FC004B96D9 /* ValueLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B11251C257C58FC004B96D9 /* ValueLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueLogApp.swift; sourceTree = "<group>"; };
 		2B11251E257C58FC004B96D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 			path = ValueLogTests;
 			sourceTree = "<group>";
 		};
+		2B08199A25DE8BC500F9D522 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B08199B25DE8BCE00F9D522 /* Array+Toggle.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2B112510257C58FC004B96D9 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +114,7 @@
 		2B11251B257C58FC004B96D9 /* ValueLog */ = {
 			isa = PBXGroup;
 			children = (
+				2B08199A25DE8BC500F9D522 /* Extensions */,
 				2B08197C25DDF1AC00F9D522 /* Views */,
 				2B11251C257C58FC004B96D9 /* ValueLogApp.swift */,
 				2B08197825DDF0A900F9D522 /* ContentViewModel.swift */,
@@ -256,6 +267,7 @@
 			files = (
 				2B08197925DDF0A900F9D522 /* ContentViewModel.swift in Sources */,
 				2B08197525DDF05B00F9D522 /* HierarchyView.swift in Sources */,
+				2B08199C25DE8BCE00F9D522 /* Array+Toggle.swift in Sources */,
 				2B08198125DDF31900F9D522 /* View+Navigation.swift in Sources */,
 				2B11251F257C58FC004B96D9 /* ContentView.swift in Sources */,
 				2B08197E25DDF1B700F9D522 /* CapsuleButton.swift in Sources */,
