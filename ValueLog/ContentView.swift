@@ -10,24 +10,13 @@ import SwiftUI
 typealias Value = String
 
 struct ContentView: View {
-    @State var maxCount = 5
-    @State var selectedValues: [Value] = []
-    @State var values: [Value] = [
-        "Acceptance", "Faith", "Knowledge", "Achievement",
-        "Fame", "Obedience", "Adventure", "Family",
-        "Open-mindedness", "Advocacy", "Financial security", "Popularity",
-        "Confidence", "Friendships", "Positivity", "Community",
-        "Hard work", "Power", "Compassion", "Health",
-        "Resilience", "Dependability", "Honesty", "Self-control",
-        "Environmentalism", "Humor/fun", "Self-expression", "Fairness",
-        "Independence", "Tradition"
-    ]
+    @ObservedObject var viewModel: ContentViewModel
 
     var body: some View {
         NavigationView {
             VStack {
                 Spacer()
-                Text("What are your core values? \(selectedValues.count)/\(maxCount)")
+                Text("What are your core values? \(viewModel.selectedValues.count)/\(viewModel.maxCount)")
                     .font(.headline)
                     .fontWeight(.bold)
                 Spacer()
@@ -41,17 +30,17 @@ struct ContentView: View {
     }
 
     var nextButton: some View {
-        NavigationLink(destination: HierarchyView(coreValues: selectedValues)) {
+        NavigationLink(destination: HierarchyView(coreValues: viewModel.selectedValues)) {
             Text("Next")
                 .foregroundColor(Color(.label))
                 .padding()
                 .frame(width: 180)
                 .background(
                     Capsule()
-                        .foregroundColor(selectedValues.count < maxCount ? .gray : .purple)
+                        .foregroundColor(viewModel.selectedValues.count < viewModel.maxCount ? .gray : .purple)
                 )
         }
-        .disabled(selectedValues.count < maxCount)
+        .disabled(viewModel.selectedValues.count < viewModel.maxCount)
     }
 
     var valueGrid: some View {
@@ -61,13 +50,9 @@ struct ContentView: View {
             GridItem(.flexible()),
             GridItem(.flexible())
         ]) {
-            ForEach(values, id: \.self) { value in
+            ForEach(viewModel.values, id: \.self) { value in
                 Button {
-                    if selectedValues.contains(value) {
-                        selectedValues.removeAll(where: { $0 == value })
-                    } else {
-                        selectedValues.append(value)
-                    }
+                    viewModel.addValue(value)
                 } label: {
                     Text(value)
                         .foregroundColor(Color(.label))
@@ -75,10 +60,10 @@ struct ContentView: View {
                         .frame(width: 180)
                         .background(
                             Capsule()
-                                .foregroundColor(selectedValues.contains(value) ? .gray : .purple)
+                                .foregroundColor(viewModel.selectedValues.contains(value) ? .gray : .purple)
                         )
                 }
-                .disabled(!selectedValues.contains(value) && selectedValues.count >= maxCount)
+                .disabled(!viewModel.selectedValues.contains(value) && viewModel.selectedValues.count >= viewModel.maxCount)
             }
         }
     }
@@ -86,6 +71,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: ContentViewModel())
     }
 }
