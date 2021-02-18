@@ -12,11 +12,22 @@
 		2B08197E25DDF1B700F9D522 /* CapsuleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08197D25DDF1B700F9D522 /* CapsuleButton.swift */; };
 		2B08198125DDF31900F9D522 /* View+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08198025DDF31900F9D522 /* View+Navigation.swift */; };
 		2B08198725DE88AC00F9D522 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2B08198625DE88AC00F9D522 /* .swiftlint.yml */; };
+		2B08199125DE8A6800F9D522 /* ValueLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08199025DE8A6800F9D522 /* ValueLogTests.swift */; };
 		2B11251D257C58FC004B96D9 /* ValueLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11251C257C58FC004B96D9 /* ValueLogApp.swift */; };
 		2B11251F257C58FC004B96D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B11251E257C58FC004B96D9 /* ContentView.swift */; };
 		2B112521257C58FD004B96D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B112520257C58FD004B96D9 /* Assets.xcassets */; };
 		2B112524257C58FD004B96D9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B112523257C58FD004B96D9 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2B08199325DE8A6800F9D522 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2B112511257C58FC004B96D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B112518257C58FC004B96D9;
+			remoteInfo = ValueLog;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2B08197425DDF05B00F9D522 /* HierarchyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HierarchyView.swift; sourceTree = "<group>"; };
@@ -24,6 +35,9 @@
 		2B08197D25DDF1B700F9D522 /* CapsuleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleButton.swift; sourceTree = "<group>"; };
 		2B08198025DDF31900F9D522 /* View+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Navigation.swift"; sourceTree = "<group>"; };
 		2B08198625DE88AC00F9D522 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		2B08198E25DE8A6800F9D522 /* ValueLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B08199025DE8A6800F9D522 /* ValueLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueLogTests.swift; sourceTree = "<group>"; };
+		2B08199225DE8A6800F9D522 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B112519257C58FC004B96D9 /* ValueLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B11251C257C58FC004B96D9 /* ValueLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueLogApp.swift; sourceTree = "<group>"; };
 		2B11251E257C58FC004B96D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -33,6 +47,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2B08198B25DE8A6800F9D522 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B112516257C58FC004B96D9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,11 +73,21 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2B08198F25DE8A6800F9D522 /* ValueLogTests */ = {
+			isa = PBXGroup;
+			children = (
+				2B08199025DE8A6800F9D522 /* ValueLogTests.swift */,
+				2B08199225DE8A6800F9D522 /* Info.plist */,
+			);
+			path = ValueLogTests;
+			sourceTree = "<group>";
+		};
 		2B112510257C58FC004B96D9 = {
 			isa = PBXGroup;
 			children = (
 				2B08198625DE88AC00F9D522 /* .swiftlint.yml */,
 				2B11251B257C58FC004B96D9 /* ValueLog */,
+				2B08198F25DE8A6800F9D522 /* ValueLogTests */,
 				2B11251A257C58FC004B96D9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				2B112519257C58FC004B96D9 /* ValueLog.app */,
+				2B08198E25DE8A6800F9D522 /* ValueLogTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +127,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2B08198D25DE8A6800F9D522 /* ValueLogTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B08199525DE8A6800F9D522 /* Build configuration list for PBXNativeTarget "ValueLogTests" */;
+			buildPhases = (
+				2B08198A25DE8A6800F9D522 /* Sources */,
+				2B08198B25DE8A6800F9D522 /* Frameworks */,
+				2B08198C25DE8A6800F9D522 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B08199425DE8A6800F9D522 /* PBXTargetDependency */,
+			);
+			name = ValueLogTests;
+			productName = ValueLogTests;
+			productReference = 2B08198E25DE8A6800F9D522 /* ValueLogTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		2B112518257C58FC004B96D9 /* ValueLog */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B112528257C58FD004B96D9 /* Build configuration list for PBXNativeTarget "ValueLog" */;
@@ -119,9 +169,13 @@
 		2B112511257C58FC004B96D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1220;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
+					2B08198D25DE8A6800F9D522 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 2B112518257C58FC004B96D9;
+					};
 					2B112518257C58FC004B96D9 = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -141,11 +195,19 @@
 			projectRoot = "";
 			targets = (
 				2B112518257C58FC004B96D9 /* ValueLog */,
+				2B08198D25DE8A6800F9D522 /* ValueLogTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		2B08198C25DE8A6800F9D522 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B112517257C58FC004B96D9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,6 +242,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2B08198A25DE8A6800F9D522 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B08199125DE8A6800F9D522 /* ValueLogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B112515257C58FC004B96D9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,7 +265,57 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		2B08199425DE8A6800F9D522 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B112518257C58FC004B96D9 /* ValueLog */;
+			targetProxy = 2B08199325DE8A6800F9D522 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		2B08199625DE8A6800F9D522 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WDGXAFZJ6;
+				INFOPLIST_FILE = ValueLogTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manor.ian.ValueLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValueLog.app/ValueLog";
+			};
+			name = Debug;
+		};
+		2B08199725DE8A6800F9D522 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4WDGXAFZJ6;
+				INFOPLIST_FILE = ValueLogTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.manor.ian.ValueLogTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValueLog.app/ValueLog";
+			};
+			name = Release;
+		};
 		2B112526257C58FD004B96D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,6 +479,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B08199525DE8A6800F9D522 /* Build configuration list for PBXNativeTarget "ValueLogTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B08199625DE8A6800F9D522 /* Debug */,
+				2B08199725DE8A6800F9D522 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2B112514257C58FC004B96D9 /* Build configuration list for PBXProject "ValueLog" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
