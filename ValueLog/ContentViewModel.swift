@@ -7,7 +7,20 @@
 
 import Foundation
 
+enum ContentViewNavigation: Identifiable {
+    case hierarchyView
+
+    // MARK: Identifiable
+    var id: Int {
+        switch self {
+        case .hierarchyView:
+            return 1
+        }
+    }
+}
+
 class ContentViewModel: ObservableObject {
+    @Published var showingNavigation: ContentViewNavigation?
     @Published var maxCount = 5
     @Published var selectedValues: [Value] = []
     @Published var values: [Value] = [

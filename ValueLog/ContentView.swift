@@ -25,20 +25,17 @@ struct ContentView: View {
                 nextButton
                 Spacer()
             }
+            .navigation(item: $viewModel.showingNavigation, destination: presentNavigation)
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
 
     var nextButton: some View {
-        NavigationLink(destination: HierarchyView(coreValues: viewModel.selectedValues)) {
-            Text("Next")
-                .foregroundColor(Color(.label))
-                .padding()
-                .frame(width: 180)
-                .background(
-                    Capsule()
-                        .foregroundColor(viewModel.selectedValues.count < viewModel.maxCount ? .gray : .purple)
-                )
+        CapsuleButton(
+            value: "Next",
+            backgroundColor: viewModel.selectedValues.count < viewModel.maxCount ? .gray : .purple
+        ) {
+            viewModel.showingNavigation = .hierarchyView
         }
         .disabled(viewModel.selectedValues.count < viewModel.maxCount)
     }
@@ -51,20 +48,22 @@ struct ContentView: View {
             GridItem(.flexible())
         ]) {
             ForEach(viewModel.values, id: \.self) { value in
-                Button {
+                CapsuleButton(
+                    value: value,
+                    backgroundColor: viewModel.selectedValues.contains(value) ? .gray : .purple
+                ) {
                     viewModel.addValue(value)
-                } label: {
-                    Text(value)
-                        .foregroundColor(Color(.label))
-                        .padding()
-                        .frame(width: 180)
-                        .background(
-                            Capsule()
-                                .foregroundColor(viewModel.selectedValues.contains(value) ? .gray : .purple)
-                        )
                 }
                 .disabled(!viewModel.selectedValues.contains(value) && viewModel.selectedValues.count >= viewModel.maxCount)
             }
+        }
+    }
+
+    @ViewBuilder
+    func presentNavigation(_ navigation: ContentViewNavigation) -> some View {
+        switch navigation {
+        case .hierarchyView:
+            HierarchyView(coreValues: viewModel.selectedValues)
         }
     }
 }
