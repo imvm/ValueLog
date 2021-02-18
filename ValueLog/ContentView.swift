@@ -84,18 +84,6 @@ struct ContentView: View {
     }
 }
 
-struct HierarchyView: View {
-    @State var coreValues: [Value]
-
-    var body: some View {
-        VStack {
-            ForEach(coreValues, id: \.self) { coreValue in
-                Text(coreValue)
-            }
-        }
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
